@@ -131,7 +131,7 @@
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(80, 40);
             this.btnCalcular.TabIndex = 6;
-            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.Text = "Consultar";
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
@@ -151,6 +151,7 @@
             this.Name = "frmDos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Organizacion Ferro - Viajes";
+            this.Load += new System.EventHandler(this.frmDos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
