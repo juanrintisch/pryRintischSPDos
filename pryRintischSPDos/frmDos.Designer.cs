@@ -36,6 +36,7 @@
             this.cmbDias = new System.Windows.Forms.ComboBox();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.mskKm = new System.Windows.Forms.MaskedTextBox();
+            this.lblTextoKm = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -72,7 +73,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(210, 6);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(91, 20);
+            this.txtNombre.Size = new System.Drawing.Size(118, 20);
             this.txtNombre.TabIndex = 0;
             // 
             // cmbDias
@@ -117,14 +118,16 @@
             // 
             // btnCalcular
             // 
+            this.btnCalcular.BackColor = System.Drawing.SystemColors.Window;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(155, 114);
+            this.btnCalcular.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btnCalcular.Location = new System.Drawing.Point(286, 95);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(80, 40);
             this.btnCalcular.TabIndex = 3;
             this.btnCalcular.Text = "Consultar";
-            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.UseVisualStyleBackColor = false;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // mskKm
@@ -136,11 +139,23 @@
             this.mskKm.TabIndex = 1;
             this.mskKm.ValidatingType = typeof(int);
             // 
+            // lblTextoKm
+            // 
+            this.lblTextoKm.AutoSize = true;
+            this.lblTextoKm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTextoKm.Location = new System.Drawing.Point(256, 44);
+            this.lblTextoKm.Name = "lblTextoKm";
+            this.lblTextoKm.Size = new System.Drawing.Size(24, 13);
+            this.lblTextoKm.TabIndex = 4;
+            this.lblTextoKm.Text = "Km";
+            // 
             // frmDos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 192);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(378, 147);
+            this.Controls.Add(this.lblTextoKm);
             this.Controls.Add(this.mskKm);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.cmbDias);
@@ -167,5 +182,6 @@
         private System.Windows.Forms.ComboBox cmbDias;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.MaskedTextBox mskKm;
+        private System.Windows.Forms.Label lblTextoKm;
     }
 }

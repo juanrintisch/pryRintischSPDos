@@ -25,7 +25,6 @@ namespace pryRintischSPDos
         private void btnCalcular_Click(object sender, EventArgs e)
         {
 
-
             if (txtNombre.Text == "")
             {
 
@@ -57,6 +56,7 @@ namespace pryRintischSPDos
                 int Dias = int.Parse(cmbDias.Text); 
                 double PrecioTotal = 0; 
                 PrecioTotal = Km * 5;
+
                 if (Km >= 100 && Dias >= 7)
                 {
 
@@ -65,23 +65,41 @@ namespace pryRintischSPDos
                     txtNombre.Clear();
                     mskKm.Clear();
                     cmbDias.SelectedIndex = -1;
+                    txtNombre.Focus();
 
                 }
-                else if (Km <= 100 && Dias <= 7)
+                else if (Km <= 99 && Dias <= 6)
                 {
                                      
                     MessageBox.Show("No se aplicó ningún descuento" + "\n" + "Lugar de Destino: " + txtNombre.Text + "\n" + "El Precio del Viaje es: " + PrecioTotal.ToString("C") + "\n" + "Muchas Gracias por Elegirnos", "Organizacion Ferro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNombre.Clear();
                     mskKm.Clear();
-                    cmbDias.SelectedIndex = -1; 
+                    cmbDias.SelectedIndex = -1;
+                    txtNombre.Focus();
+
+                }
+                else if (Km >= 100 && Dias <= 6)
+                {
                     
+                    MessageBox.Show("No se aplicó ningún descuento" + "\n" + "Lugar de Destino: " + txtNombre.Text + "\n" + "El Precio del Viaje es: " + PrecioTotal.ToString("C") + "\n" + "Muchas Gracias por Elegirnos", "Organizacion Ferro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNombre.Clear();
+                    mskKm.Clear();
+                    cmbDias.SelectedIndex = -1;
+                    txtNombre.Focus();
+
+                }
+                else if (Km <= 99 && Dias >= 7)
+                {
+
+                    MessageBox.Show("No se aplicó ningún descuento" + "\n" + "Lugar de Destino: " + txtNombre.Text + "\n" + "El Precio del Viaje es: " + PrecioTotal.ToString("C") + "\n" + "Muchas Gracias por Elegirnos", "Organizacion Ferro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNombre.Clear();
+                    mskKm.Clear();
+                    cmbDias.SelectedIndex = -1;
+                    txtNombre.Focus();
+
                 }
             }
-
-
-
         }
-
         private void frmDos_Load(object sender, EventArgs e)
         {
             
