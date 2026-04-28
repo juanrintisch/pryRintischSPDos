@@ -31,13 +31,15 @@ namespace pryRintischSPDos
 
                 MessageBox.Show("Ingrese un Nombre de Destino.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNombre.Focus();
+                return;
 
             }
-            else if (txtKm.Text == "")
+            else if (mskKm.Text == "")
             {
 
                 MessageBox.Show("Ingrese la cantidad de Kilómetros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtKm.Focus();
+                mskKm.Focus();
+                return;
 
             }
             else if (cmbDias.SelectedIndex == -1)
@@ -45,12 +47,13 @@ namespace pryRintischSPDos
 
                 MessageBox.Show("Seleccione la cantidad de Días.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbDias.Focus();
+                return;
 
             }
             else
             {
                 
-                int Km = int.Parse(txtKm.Text); 
+                int Km = int.Parse(mskKm.Text); 
                 int Dias = int.Parse(cmbDias.Text); 
                 double PrecioTotal = 0; 
                 PrecioTotal = Km * 5;
@@ -60,7 +63,7 @@ namespace pryRintischSPDos
                     PrecioTotal = PrecioTotal * 0.5;
                     MessageBox.Show("El Descuennto fue Aplicado con Exito" + "\n" + "Lugar de Destino: " + txtNombre.Text + "\n" + "El Precio del Viaje es: " + PrecioTotal.ToString("C") + "\n" + "Muchas Gracias por Elegirnos", "Organizacion Ferro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNombre.Clear();
-                    txtKm.Clear();
+                    mskKm.Clear();
                     cmbDias.SelectedIndex = -1;
 
                 }
@@ -69,7 +72,7 @@ namespace pryRintischSPDos
                                      
                     MessageBox.Show("No se aplicó ningún descuento" + "\n" + "Lugar de Destino: " + txtNombre.Text + "\n" + "El Precio del Viaje es: " + PrecioTotal.ToString("C") + "\n" + "Muchas Gracias por Elegirnos", "Organizacion Ferro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNombre.Clear();
-                    txtKm.Clear();
+                    mskKm.Clear();
                     cmbDias.SelectedIndex = -1; 
                     
                 }

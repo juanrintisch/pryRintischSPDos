@@ -33,9 +33,9 @@
             this.lblKm = new System.Windows.Forms.Label();
             this.lblDias = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtKm = new System.Windows.Forms.TextBox();
             this.cmbDias = new System.Windows.Forms.ComboBox();
             this.btnCalcular = new System.Windows.Forms.Button();
+            this.mskKm = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -72,16 +72,8 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(210, 6);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 3;
-            // 
-            // txtKm
-            // 
-            this.txtKm.Location = new System.Drawing.Point(210, 37);
-            this.txtKm.MaxLength = 123123;
-            this.txtKm.Name = "txtKm";
-            this.txtKm.Size = new System.Drawing.Size(64, 20);
-            this.txtKm.TabIndex = 4;
+            this.txtNombre.Size = new System.Drawing.Size(91, 20);
+            this.txtNombre.TabIndex = 0;
             // 
             // cmbDias
             // 
@@ -121,7 +113,7 @@
             this.cmbDias.Location = new System.Drawing.Point(210, 68);
             this.cmbDias.Name = "cmbDias";
             this.cmbDias.Size = new System.Drawing.Size(40, 21);
-            this.cmbDias.TabIndex = 5;
+            this.cmbDias.TabIndex = 2;
             // 
             // btnCalcular
             // 
@@ -130,19 +122,28 @@
             this.btnCalcular.Location = new System.Drawing.Point(155, 114);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(80, 40);
-            this.btnCalcular.TabIndex = 6;
+            this.btnCalcular.TabIndex = 3;
             this.btnCalcular.Text = "Consultar";
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // mskKm
+            // 
+            this.mskKm.Location = new System.Drawing.Point(210, 37);
+            this.mskKm.Mask = "9999";
+            this.mskKm.Name = "mskKm";
+            this.mskKm.Size = new System.Drawing.Size(40, 20);
+            this.mskKm.TabIndex = 1;
+            this.mskKm.ValidatingType = typeof(int);
             // 
             // frmDos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 251);
+            this.ClientSize = new System.Drawing.Size(422, 192);
+            this.Controls.Add(this.mskKm);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.cmbDias);
-            this.Controls.Add(this.txtKm);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblDias);
             this.Controls.Add(this.lblKm);
@@ -163,8 +164,8 @@
         private System.Windows.Forms.Label lblKm;
         private System.Windows.Forms.Label lblDias;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtKm;
         private System.Windows.Forms.ComboBox cmbDias;
         private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.MaskedTextBox mskKm;
     }
 }
