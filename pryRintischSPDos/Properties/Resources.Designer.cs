@@ -63,6 +63,16 @@ namespace pryRintischSPDos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_55v52t55v52t55v5 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_55v52t55v52t55v5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gemini_Generated_Image_knzxuyknzxuyknzx {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_knzxuyknzxuyknzx", resourceCulture);
