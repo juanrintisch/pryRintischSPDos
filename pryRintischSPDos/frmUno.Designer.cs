@@ -59,6 +59,7 @@
             this.Name = "frmUno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido!!!";
+            this.Load += new System.EventHandler(this.frmUno_Load);
             this.ResumeLayout(false);
 
         }

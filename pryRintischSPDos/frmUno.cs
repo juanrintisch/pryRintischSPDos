@@ -23,5 +23,10 @@ namespace pryRintischSPDos
             this.Hide();
             frmDos.Show();
         }
+
+        private void frmUno_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
